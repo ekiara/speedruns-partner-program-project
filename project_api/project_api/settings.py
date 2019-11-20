@@ -18,6 +18,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+INSTALLED_APPS += [
+    # Third Party Apps
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
