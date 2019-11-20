@@ -28,6 +28,8 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     # Custom apps
     'users',
+    'api',
+    'partners',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'

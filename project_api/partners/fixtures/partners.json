@@ -1,0 +1,34 @@
+[
+    {
+        "model": "partners.partner",
+        "pk": 1,
+        "fields":
+        {
+            "name": "Equity Bank Limited"
+        }
+    },
+    {
+        "model": "partners.partner",
+        "pk": 2,
+        "fields":
+        {
+            "name": "Kenya Commercial Bank Group Limited"
+        }
+    },
+    {
+        "model": "partners.partner",
+        "pk": 3,
+        "fields":
+        {
+            "name": "Mastercard Inc."
+        }
+    },
+    {
+        "model": "partners.partner",
+        "pk": 4,
+        "fields":
+        {
+            "name": "Visa Inc."
+        }
+    }
+]
