@@ -19,11 +19,18 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    # Third Party Apps
+    # Third-party apps
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
 ]
+
+INSTALLED_APPS += [
+    # Custom apps
+    'users',
+]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
