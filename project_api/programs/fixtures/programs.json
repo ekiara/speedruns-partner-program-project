@@ -1,0 +1,35 @@
+[
+    {
+        "model": "programs.program",
+        "pk": 1,
+        "fields":
+        {
+            "program_name": "Financial Education Program",
+            "program_code": "FINED",
+            "description": "Financial Education",
+            "partner_name":"Equity Bank Limited"
+        }
+    },
+    {
+        "model": "programs.program",
+        "pk": 2,
+        "fields":
+        {
+            "program_name": "Business Development Program",
+            "program_code": "BUSD",
+            "description": "Business Development",
+            "partner_name":"Kenya Commercial Bank Group Limited"
+        }
+    },
+    {
+        "model": "programs.program",
+        "pk": 3,
+        "fields":
+        {
+            "program_name": "Grow Your Business",
+            "program_code": "GYBD",
+            "description": "Business Development",
+            "partner_name":"Mastercard Inc."
+        }
+    }
+]
