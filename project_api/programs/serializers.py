@@ -30,9 +30,14 @@ class ProgramCreateSerializer(serializers.ModelSerializer):
         }
 
         # Check if a matching partner with partner_id exists
-        existing_partner = Partner.objects.filter(id=validated_data["partner_id"]).first()
+        existing_partner = Partner.objects.filter(
+            id=validated_data["partner_id"]
+        ).first()
         if not existing_partner:
-            errmsg = str("There is no Partner with id: %s, returning Null Program" % validated_data["partner_id"])
+            errmsg = \
+                "There is no Partner with id: " + \
+                str(validated_data["partner_id"]) + \
+                ", returning Null Program"
             return null_program
 
         program = Program.objects.create(**validated_data)
