@@ -30,6 +30,8 @@ INSTALLED_APPS += [
     'users',
     'api',
     'partners',
+    'programs',
+    'projects',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
