@@ -1,7 +1,7 @@
 # programs/serializers.py
 from rest_framework import serializers
 from .models import Program
-from partners.helpers import get_partner
+from partners.models import Partner
 
 
 class ProgramSerializer(serializers.ModelSerializer):
@@ -30,22 +30,17 @@ class ProgramCreateSerializer(serializers.ModelSerializer):
         }
 
         # Check if a matching partner with partner_id exists
-        # existing_partner = Partner.objects.filter(id=validated_data['partner_id']).first()
-        existing_partner = get_partner(partner_id=validated_data['partner_id'])
+        existing_partner = Partner.objects.filter(id=validated_data["partner_id"]).first()
         if not existing_partner:
-            errmsg = ("There is no Partner with id: " +
-                      str(validated_data["partner_id"]) +
-                      ", returning Null Program Object.")
+            errmsg = str("There is no Partner with id: %s, returning Null Program" % validated_data["partner_id"])
             return null_program
 
-        # If we're here then a partner with partner_id exists and we can
-        # proceed.
         program = Program.objects.create(**validated_data)
-        program.partner_id = validated_data['partner_id']
+        program.partner_id = validated_data["partner_id"]
 
         try:
             program.save()
             return program
         except Exception as exception:
-            errmsg = "Unexpected Exception: " + str(exception)
+            errmsg = "Unexpected error when trying to save: " + str(exception)
             return null_program
