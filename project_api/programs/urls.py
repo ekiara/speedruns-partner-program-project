@@ -9,9 +9,9 @@ from .views import ProgramUpdate
 from .views import ProgramDelete
 
 urlpatterns = [
-    path('', ProgramListView.as_view()),
-    path('create/', ProgramCreate.as_view()),
-    path('<int:pk>/', ProgramRetrieve.as_view()),
-    path('<int:pk>/update/', ProgramUpdate.as_view()),
-    path('<int:pk>/delete/', ProgramDelete.as_view()),
+    path(route='', view=ProgramListView.as_view(), name="programs_root"),
+    path(route='create/', view=ProgramCreate.as_view(), name="programs_create"),
+    path(route='<int:pk>/', view=ProgramRetrieve.as_view(), name="programs_retrieve"),
+    path(route='<int:pk>/update/', view=ProgramUpdate.as_view(), name="programs_update"),
+    path(route='<int:pk>/delete/', view=ProgramDelete.as_view(), name="programs_delete"),
 ]
