@@ -9,3 +9,7 @@ class Partner(models.Model):
 
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=128)
+
+    def program_count(self):                                                    
+        return self.programs.count()                                            
+
