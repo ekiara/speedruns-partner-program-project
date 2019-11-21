@@ -9,9 +9,9 @@ from .views import PartnerUpdate
 from .views import PartnerDelete
 
 urlpatterns = [
-    path('', PartnerListView.as_view()),
-    path('create/', PartnerCreate.as_view()),                                   
-    path('<int:pk>/', PartnerRetrieve.as_view()),                               
-    path('<int:pk>/update/', PartnerUpdate.as_view()),                          
-    path('<int:pk>/delete/', PartnerDelete.as_view()),                          
+    path(route="", view=PartnerListView.as_view(), name="partners_root"),
+    path(route="create/", view=PartnerCreate.as_view(), name="partners_create"),
+    path(route="<int:pk>/", view=PartnerRetrieve.as_view(), name="partners_retrieve"),
+    path(route="<int:pk>/update/", view=PartnerUpdate.as_view(), name="partners_update"),
+    path(route="<int:pk>/delete/", view=PartnerDelete.as_view(), name="partners_delete"),
 ]
