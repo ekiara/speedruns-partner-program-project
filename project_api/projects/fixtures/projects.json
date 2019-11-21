@@ -1,0 +1,38 @@
+[
+    {
+        "model": "projects.project",
+        "pk": 1,
+        "fields":
+        {
+            "project_name": "Equity Project 1",
+            "program_code": "FINED"
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 2,
+        "fields":
+        {
+            "project_name": "Equity Project 2",
+            "program_code": "FINED"
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 3,
+        "fields":
+        {
+            "project_name": "KCB Project 1",
+            "program_code": "BUSD"
+        }
+    },
+    {
+        "model": "projects.project",
+        "pk": 4,
+        "fields":
+        {
+            "project_name": "Mastercard Project 1",
+            "program_code": "GYBD"
+        }
+    }
+]
