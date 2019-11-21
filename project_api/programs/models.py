@@ -16,3 +16,9 @@ class Program(models.Model):
         related_name='programs',
         on_delete=models.CASCADE,
     )
+
+    def partner_id(self):
+        return self.partner.id
+
+    def project_count(self):
+        return self.projects.count()
